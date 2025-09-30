@@ -169,6 +169,38 @@ cat /etc/resolv.conf
 ```bash
 echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
+---
+
+<img width="719" height="159" alt="image" src="https://github.com/user-attachments/assets/5d3aee6d-052f-4a05-ab8c-5cb5949126ab" />
 
 ---
+
+<img width="719" height="214" alt="image" src="https://github.com/user-attachments/assets/c242484f-1618-477f-976e-67c9fd92020f" />
+
+---
+
+<img width="694" height="187" alt="image" src="https://github.com/user-attachments/assets/cbb9b342-f473-472e-9ef8-75853bfb64b4" />
+
+---
+
+<img width="734" height="241" alt="image" src="https://github.com/user-attachments/assets/aa12b253-a142-447c-be34-73d1bec4b825" />
+
+---
+
+<img width="733" height="268" alt="image" src="https://github.com/user-attachments/assets/e2cab122-397a-4299-b7c2-b948c2dedee8" />
+
+## Soal 5
+---
+
+Gunakan ```nano /root/.bashrc``` agar dapat mengakses /root dan simpan knfigurasi dan command di file tersebut
+
+---
+
+<img width="801" height="447" alt="image" src="https://github.com/user-attachments/assets/0824e357-b396-45d5-a85b-dd66efddab01" />
+
+
+## Soal 6
+
+
+
 
