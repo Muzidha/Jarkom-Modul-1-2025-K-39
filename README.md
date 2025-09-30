@@ -2,7 +2,9 @@
 
 ## Soal 1
 Untuk mempersiapkan pembuatan entitas selain mereka, Eru yang berperan sebagai Router membuat dua Switch/Gateway. Dimana Switch 1 akan menuju ke dua Ainur yaitu Melkor dan Manwe. Sedangkan Switch 2 akan menuju ke dua Ainur lainnya yaitu Varda dan Ulmo. Keempat Ainur tersebut diberi perintah oleh Eru untuk menjadi Client.
+---
 <img width="487" height="335" alt="image" src="https://github.com/user-attachments/assets/42800e5a-0b23-42b8-9224-9cd4c8f99f0f" />
+---
 - NAT 1 dihubungkan ke Eru eth0
 - Switch1 eth0 disambung ke Eru eth1
 - Switch2 eth0 disambung ke Eru eth2
@@ -13,6 +15,7 @@ Untuk mempersiapkan pembuatan entitas selain mereka, Eru yang berperan sebagai R
 
 ## Soal 2 
 Karena menurut Eru pada saat itu Arda (Bumi) masih terisolasi dengan dunia luar, maka buat agar Eru dapat tersambung ke internet.
+---
 <img width="514" height="301" alt="image" src="https://github.com/user-attachments/assets/3fa3ff5c-191d-4fd4-b930-4dc3f41baac6" />
 ```
 auto eth0
@@ -72,9 +75,9 @@ iface eth2 inet static
 
 ## Soal 3
 Sekarang pastikan agar setiap Ainur (Client) dapat terhubung satu sama lain.
-
+---
 <img width="915" height="591" alt="image" src="https://github.com/user-attachments/assets/b565da26-6dbd-46ee-ad83-36f983333763" />
-
+---
 #### Eru
 ```
 auto eth0
