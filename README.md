@@ -248,7 +248,7 @@ kita diminta menganalisis file capture yang disediakan dan melakukan identifikas
 
 Setelah kita cari, ternyata ada dua alamat IP yang memiliki jumlah paket terbanyak, yaitu 172.19.5.26 dan 192.168.129.101. Setelah itu, kita coba memfilter trafik yang berhubungan dengan alamat IP tersebut pertama-tama kita ambil 172.19.5.26. Berikut adalah filter yang saya gunakan.
 
-```
+```bash
 http && ip.addr == 172.19.5.26
 ```
 
@@ -276,7 +276,7 @@ Lalu, kita akan memperoleh informasi yang mengarahkan kita pada jawaban akhir so
 
 Di sini kita menemukan beberapa kata kunci penting, yaitu “username” dan “password”. Namun ketika kita memfilter menggunakan frame contains "username" dan frame contains "password", hasilnya sama seperti sebelumnya. Oleh karena itu saya mencari kata kunci lain yang lebih relevan dengan soal dan memfilter menggunakan kata kunci tersebut.
 
-```
+```bash
 frame contains "success"
 ```
 
@@ -294,7 +294,7 @@ Dan yap, kita berhasil menemukan username dan password yang digunakan untuk logi
 
 Kita perhatikan dari awal bahwa sebagian besar paket protokol adalah USB dengan informasi URB_INTERRUPT, serta memiliki (length) 27 dan 35. Namun, setelah ditelusuri, paket dengan length 35 yang mengandung HID data. Selanjutnya, kita memfilter sesuai dengan informasi yang telah diperoleh.
 
-```
+```bash
 usb.device_address == 11 && usb.endpoint_address == 0x81 && frame.len == 35
 
 ```
@@ -342,6 +342,36 @@ Setelah kita decode, kita mendapatkan “Plz_pr0v1de_y0ur_us3rn4me_4nd_p4ssw0rd�
 Dan yap, kita mendapatkan flag yaitu “KOMJAR25{K3yb0ard_W4rr10r_sT0UVHySWdqlbKVtCN8IBRmmq}”
 
 ## Soal 16
+
+Untuk awal-awal kita mencari informasi lewat statistic dan analyze. 
+- Statistics → Conversations
+- Statistics → Endpoints
+- Analyze → Follow TCP Stream
+- Edit → Preferences → Protocols → TCP
+
+Dari hasil pencarian informasi tersebut, kita dapat menjalankan sebuah filter.
+
+```bash
+
+tcp.port == 21 || tcp.port == 49205
+
+```
+---
+
+<img width="1322" height="510" alt="Screenshot 2025-10-01 214653" src="https://github.com/user-attachments/assets/ef6d32a3-2dd6-4eca-84ba-a49d62f6dca7" />
+
+---
+
+Dari hasil filter tersebut, saya memeriksa setiap IP satu per satu dan menemukan sebuah anomali berwarna merah. Selanjutnya, kita klik kanan → Follow → TCP Stream, atau menekan kombinasi tombol Ctrl + Alt + Shift + T untuk melihat isi dari IP tersebut.
+
+---
+
+<img width="1252" height="589" alt="Screenshot 2025-10-01 214716" src="https://github.com/user-attachments/assets/d254d3fa-a9f1-4d63-bd3d-0efb5608c7dc" />
+
+---
+
+Lalu kita akan mendapatkan isi dari IP tersebut yang berguna untuk dijalankan melalui terminal.
+
 
 
 
