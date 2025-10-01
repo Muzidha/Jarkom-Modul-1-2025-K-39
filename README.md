@@ -198,8 +198,45 @@ Gunakan ```nano /root/.bashrc``` agar dapat mengakses /root dan simpan knfiguras
 
 <img width="801" height="447" alt="image" src="https://github.com/user-attachments/assets/0824e357-b396-45d5-a85b-dd66efddab01" />
 
+---
+
+Gunakan cara yang sama di setiap node dan simpan konfigurasi agar ketika restart tidak diulang dari awal
+
+---
+
+<img width="721" height="278" alt="image" src="https://github.com/user-attachments/assets/0cf871c2-f764-4d89-bec1-1593cc891445" />
+
+---
+
 
 ## Soal 6
+
+
+gunakan node Manwe dan masuk ke node tersebut, lalu download file traffic.zip dan Unzip paket traffic.zip tersebut. maka akan muncul file traffic.sh.
+capture traffic antara Eru dan Manwe
+---
+
+<img width="756" height="520" alt="image" src="https://github.com/user-attachments/assets/d5de6bad-5bc5-429b-97a5-d6adf76e0e93" />
+
+---
+
+setelah wireshark terbuka, jalankan file traffic.sh di node manwe
+
+---
+
+<img width="575" height="93" alt="image" src="https://github.com/user-attachments/assets/351073f5-aac2-4c84-acaf-f34d81c52ac6" />
+
+---
+
+maka akan terlihat hasil capture di wireshark. gunakan filter ```ip.src == 10.83.1.3 || ip.dst == 10.83.1.3``` untuk melihat packet mana saja yang dari Manwe dan packet yang menuju Manwe
+
+---
+
+<img width="739" height="272" alt="image" src="https://github.com/user-attachments/assets/1705ac8d-8f8e-46a1-8ab9-033e0d47b6fe" />
+
+---
+
+
 
 
 
