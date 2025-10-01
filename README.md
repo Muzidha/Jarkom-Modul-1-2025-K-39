@@ -440,6 +440,12 @@ Kita ditanya, "What is the hash of the first–fifth file", sehingga kita membuk
 
 ```
 
+<img width="843" height="558" alt="image" src="https://github.com/user-attachments/assets/9d951370-3f12-400a-a851-79d390e466d9" />
+
+---
+
+---
+
 Kita lanjutkan hingga file kelima/terakhir, dan pada akhirnya kita akan mendapatkan flag.
 
 ---
