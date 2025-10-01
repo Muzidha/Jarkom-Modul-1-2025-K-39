@@ -236,7 +236,7 @@ maka akan terlihat hasil capture di wireshark. gunakan filter ```ip.src == 10.83
 
 ---
 
-## Soal 7
+## Soal 14
 
 kita diminta menganalisis file capture yang disediakan dan melakukan identifikasi brute force. Selanjutnya, kita masuk ke Statistics → Endpoints → IPv4 untuk melihat IP yang memiliki jumlah paket terbanyak.
 
@@ -340,6 +340,10 @@ Setelah kita decode, kita mendapatkan “Plz_pr0v1de_y0ur_us3rn4me_4nd_p4ssw0rd�
 ---
 
 Dan yap, kita mendapatkan flag yaitu “KOMJAR25{K3yb0ard_W4rr10r_sT0UVHySWdqlbKVtCN8IBRmmq}”
+
+## Soal 16
+
+
 
 
 
