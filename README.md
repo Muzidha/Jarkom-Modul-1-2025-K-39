@@ -1,4 +1,4 @@
-
+<img width="531" height="90" alt="image" src="https://github.com/user-attachments/assets/36f0e6ed-dc14-46e6-b8e8-17341dec526c" /><img width="531" height="90" alt="image" src="https://github.com/user-attachments/assets/9b849d2a-da79-4ddc-9983-e156bd0f2204" />
 ---
 
 # Jarkom-Modul-1-2025-K-39
@@ -288,7 +288,41 @@ Saat dilakukan filter, hanya ada satu IP yang muncul. Kemudian kita melakukan pe
 
 ---
 
-Dan yap, kita berhasil menemukan username dan password yang digunakan untuk login.
+Dan yap, kita berhasil menemukan username dan password yang digunakan untuk login. Sekarang kita buka terminal dan menjalankan netcat ke alamat IP sesuai dengan yang diberikan pada soal.
+---
+
+<img width="512" height="141" alt="image" src="https://github.com/user-attachments/assets/c572e933-6b93-4421-bfa0-bcbb05ef9e28" />
+
+---
+
+Setelah kita masuk, kita diberikan pertanyaan, "How many packets are recorded in the pcapng file?" Kita tinggal menjawab jumlah paket yang ada di file pcapng, yaitu 50038.
+
+---
+
+<img width="562" height="84" alt="image" src="https://github.com/user-attachments/assets/8f58e4d7-c331-413c-9cfc-483f1a83da10" />
+
+---
+
+Kita tinggal melanjutkan menjawab pertanyaan sesuai yang diminta, misalnya:
+"What are the user that successfully logged in? Format: user:pass".
+Kita hanya perlu memasukkan username dan password sesuai isi TCP Stream yang diperoleh, yaitu n1enna sebagai username dan y4v4nn4_k3m3nt4r1 sebagai password.
+
+---
+
+<img width="549" height="90" alt="image" src="https://github.com/user-attachments/assets/c9365adc-f720-483b-b686-03cc44a30b6c" />
+
+---
+
+Selanjutnya, kita menjawab berdasarkan stream yang telah ditemukan hingga mencapai soal terakhir: "What tools are used for brute force? Format: Hydra v1.8.0-dev". Kita hanya perlu menjawab sesuai user-agent yang ditemukan pada TCP Stream tersebut.
+
+---
+
+<img width="925" height="91" alt="image" src="https://github.com/user-attachments/assets/f82fa19d-0691-4e8b-8a62-3f0dae71ee67" />
+
+---
+
+Dan yap, Kita sekarang mendapatkan flag nya adalah KOMJAR25{Brut3_F0rc3_4xXdFTkX7asSx12HeKIOI5jQJ}
+
 
 ## Soal 15
 
