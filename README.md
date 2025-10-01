@@ -409,14 +409,14 @@ Lalu kita akan mendapatkan isi dari IP tersebut yang berguna untuk dijalankan me
 
 ---
 
-Dan di dalam terdapat sebuah file .exe yang bisa jadi sebuah pentunjuk untuk kelanjutan mengerjakan soal ini. Benar saja jika kita memerhatikan protocol type data dan infonya terdapat 4 file exe berurutan yaitu 
+Dan di dalam terdapat sebuah file .exe yang bisa jadi sebuah pentunjuk untuk kelanjutan Lalu kita akan mendapatkan isi dari IP tersebut yang berguna untuk dijalankan melalui terminal. Di dalamnya terdapat beberapa berkas berekstensi .exe yang bisa menjadi petunjuk untuk melanjutkan pengerjaan soal ini. Benar saja—jika kita perhatikan tipe protokol dan informasinya, terdapat lima file .exe berurutan, yaitu:
 - q.exe
 - w.exe
 - e.exe
 - r.exe
 - t.exe
 
-sehingga masing-masing file kita save as sebagai raw dan kita masuk ke terminal.
+Masing-masing file kita simpan sebagai raw, lalu masuk ke terminal. Selanjutnya kita menjawab soal-soal yang muncul satu per satu.
 
 ---
 
@@ -424,7 +424,7 @@ sehingga masing-masing file kita save as sebagai raw dan kita masuk ke terminal.
 
 ---
 
-Lalu kita menjawabkan satu persatu soal yang akan ditanyakan 
+Lalu kita menjawabkan satu persatu soal yang akan ditanyakan.
 
 ---
 
@@ -432,14 +432,15 @@ Lalu kita menjawabkan satu persatu soal yang akan ditanyakan
 
 ---
 
-Untuk selanjutnya kita ditanya "What is the hash of the first - fifth file" dan kita tinggal membuka terminal baru dan menggunakan 
+Kita ditanya, "What is the hash of the first–fifth file", sehingga kita membuka terminal baru dan menggunakan perintah hashing yang sesuai untuk setiap file.
+
 ```bash
 
  sha256sum (nama file)
 
 ```
 
-Kita lanjutnkan hingga ke file kelima/terakhir dan kita akan mendapatkan flag nya.
+Kita lanjutkan hingga file kelima/terakhir, dan pada akhirnya kita akan mendapatkan flag.
 
 ---
 
