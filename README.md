@@ -403,6 +403,51 @@ Dari hasil filter tersebut, saya memeriksa setiap IP satu per satu dan menemukan
 
 Lalu kita akan mendapatkan isi dari IP tersebut yang berguna untuk dijalankan melalui terminal.
 
+---
+
+<img width="1245" height="864" alt="image" src="https://github.com/user-attachments/assets/d8353a78-06e5-45cf-bf1d-2783c2a0e536" />
+
+---
+
+Dan di dalam terdapat sebuah file .exe yang bisa jadi sebuah pentunjuk untuk kelanjutan mengerjakan soal ini. Benar saja jika kita memerhatikan protocol type data dan infonya terdapat 4 file exe berurutan yaitu 
+- q.exe
+- w.exe
+- e.exe
+- r.exe
+- t.exe
+
+sehingga masing-masing file kita save as sebagai raw dan kita masuk ke terminal.
+
+---
+
+<img width="564" height="87" alt="image" src="https://github.com/user-attachments/assets/1d0b3462-dc8c-4fef-94e5-7663423489e4" />
+
+---
+
+Lalu kita menjawabkan satu persatu soal yang akan ditanyakan 
+
+---
+
+<img width="613" height="91" alt="image" src="https://github.com/user-attachments/assets/41b2efbf-73c6-4499-9400-e699ae958dee" />
+
+---
+
+Untuk selanjutnya kita ditanya "What is the hash of the first - fifth file" dan kita tinggal membuka terminal baru dan menggunakan 
+```bash
+
+ sha256sum (nama file)
+
+```
+
+Kita lanjutnkan hingga ke file kelima/terakhir dan kita akan mendapatkan flag nya.
+
+---
+
+<img width="1147" height="108" alt="image" src="https://github.com/user-attachments/assets/2ee19421-f44f-4dc0-8b6f-0ed7f4e84754" />
+
+---
+
+Dan yap, kita mendapatkan flag nya adalah KOMJAR25{Y0u_4r3_4_g00d_4nalyz3r_tzZFv3zLIo9vjHi7IJ2HaLX04}
 
 
 
