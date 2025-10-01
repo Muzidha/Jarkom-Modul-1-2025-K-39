@@ -1,6 +1,3 @@
-<img width="531" height="90" alt="image" src="https://github.com/user-attachments/assets/36f0e6ed-dc14-46e6-b8e8-17341dec526c" /><img width="531" height="90" alt="image" src="https://github.com/user-attachments/assets/9b849d2a-da79-4ddc-9983-e156bd0f2204" />
----
-
 # Jarkom-Modul-1-2025-K-39
 
 ## Soal 1
