@@ -236,6 +236,116 @@ maka akan terlihat hasil capture di wireshark. gunakan filter ```ip.src == 10.83
 
 ---
 
+## Soal 7
+
+kita diminta menganalisis file capture yang disediakan dan melakukan identifikasi brute force. Selanjutnya, kita masuk ke Statistics → Endpoints → IPv4 untuk melihat IP yang memiliki jumlah paket terbanyak.
+
+---
+
+<img width="692" height="208" alt="Screenshot 2025-10-01 173537" src="https://github.com/user-attachments/assets/5839f6e4-8361-410b-8d61-3e478f4d3175" />
+
+---
+
+Setelah kita cari, ternyata ada dua alamat IP yang memiliki jumlah paket terbanyak, yaitu 172.19.5.26 dan 192.168.129.101. Setelah itu, kita coba memfilter trafik yang berhubungan dengan alamat IP tersebut pertama-tama kita ambil 172.19.5.26. Berikut adalah filter yang saya gunakan.
+
+```
+http && ip.addr == 172.19.5.26
+```
+
+---
+
+<img width="1275" height="236" alt="Screenshot 2025-10-01 173956" src="https://github.com/user-attachments/assets/f073f783-f9e4-40f6-a307-e4e7ace35dd6" />
+
+---
+
+Kemudian kita mencoba memeriksa salah satunya secara acak dengan cara klik kanan → Follow → TCP Stream, atau dengan menekan tombol Ctrl + Alt + Shift + T.
+
+---
+
+<img width="944" height="535" alt="Screenshot 2025-10-01 174339" src="https://github.com/user-attachments/assets/7c9c1f91-d497-4d9d-892e-0bb1492f4695" />
+
+---
+
+Lalu, kita akan memperoleh informasi yang mengarahkan kita pada jawaban akhir soal nomor 14.
+
+---
+
+<img width="540" height="404" alt="Screenshot 2025-10-01 174517" src="https://github.com/user-attachments/assets/76b75e64-e3b7-4daf-a3fb-1c3852ca43ca" />
+
+---
+
+Di sini kita menemukan beberapa kata kunci penting, yaitu “username” dan “password”. Namun ketika kita memfilter menggunakan frame contains "username" dan frame contains "password", hasilnya sama seperti sebelumnya. Oleh karena itu saya mencari kata kunci lain yang lebih relevan dengan soal dan memfilter menggunakan kata kunci tersebut.
+
+```
+frame contains "success"
+```
+
+Saat dilakukan filter, hanya ada satu IP yang muncul. Kemudian kita melakukan pengecekan dengan cara klik kanan → Follow → TCP Stream, atau dengan menekan kombinasi tombol Ctrl + Alt + Shift + T untuk melihat isi dari IP tersebut.
+
+---
+
+<img width="557" height="402" alt="Screenshot 2025-10-01 175625" src="https://github.com/user-attachments/assets/e1dc1689-5c15-42ad-b365-16a32ee28be8" />
+
+---
+
+Dan yap, kita berhasil menemukan username dan password yang digunakan untuk login.
+
+## Soal 15
+
+Kita perhatikan dari awal bahwa sebagian besar paket protokol adalah USB dengan informasi URB_INTERRUPT, serta memiliki (length) 27 dan 35. Namun, setelah ditelusuri, paket dengan length 35 yang mengandung HID data. Selanjutnya, kita memfilter sesuai dengan informasi yang telah diperoleh.
+
+```
+usb.device_address == 11 && usb.endpoint_address == 0x81 && frame.len == 35
+
+```
+
+---
+
+<img width="910" height="749" alt="Screenshot 2025-10-01 193719" src="https://github.com/user-attachments/assets/1891cff5-3fc8-484e-9e6e-a3eac427bba1" />
+
+---
+
+Setelah melakukan filter sesuai kebutuhan sehingga hanya menampilkan seluruh HID Data, kita mengekspornya menjadi satu file teks dengan cara File → Export Packet Dissections → As Plain Text.
+
+---
+
+<img width="934" height="842" alt="Screenshot 2025-10-01 193805" src="https://github.com/user-attachments/assets/d9ea74c2-562b-4257-831f-b3f7e3a1de53" />
+
+---
+
+Setelah menyimpannya sebagai sebuah file teks, kita mencoba menggunakan ChatGPT untuk membantu menerjemahkan keystroke menjadi teks.
+
+
+---
+
+<img width="572" height="547" alt="Screenshot 2025-10-01 194146" src="https://github.com/user-attachments/assets/f045c196-1143-4df9-baec-868e15b4df02" />
+
+---
+
+Akhirnya, kita mendapatkan sebuah teks dalam bentuk Base64 yaitu “UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ”.
+Setelah itu, kita membuka situs https://www.base64decode.org/ untuk melakukan decode pada hasil tersebut, lalu mengubahnya menjadi teks ASCII.
+
+---
+
+<img width="782" height="630" alt="Screenshot 2025-10-01 194828" src="https://github.com/user-attachments/assets/5766d717-7938-4e69-9242-12c3d3801ad7" />
+
+---
+
+Setelah kita decode, kita mendapatkan “Plz_pr0v1de_y0ur_us3rn4me_4nd_p4ssw0rd”, lalu kita melanjutkan ke terminal dan masuk ke netcat sesuai dengan soal.
+
+---
+
+<img width="1074" height="126" alt="Screenshot 2025-10-01 195353" src="https://github.com/user-attachments/assets/296ff167-3ba2-4d64-b436-30b6bb3a320a" />
+
+---
+
+Dan yap, kita mendapatkan flag yaitu “KOMJAR25{K3yb0ard_W4rr10r_sT0UVHySWdqlbKVtCN8IBRmmq}”
+
+
+
+
+
+
 
 
 
