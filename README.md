@@ -286,6 +286,7 @@ Saat dilakukan filter, hanya ada satu IP yang muncul. Kemudian kita melakukan pe
 ---
 
 Dan yap, kita berhasil menemukan username dan password yang digunakan untuk login. Sekarang kita buka terminal dan menjalankan netcat ke alamat IP sesuai dengan yang diberikan pada soal.
+
 ---
 
 <img width="512" height="141" alt="image" src="https://github.com/user-attachments/assets/c572e933-6b93-4421-bfa0-bcbb05ef9e28" />
