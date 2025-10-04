@@ -456,8 +456,65 @@ Kita lanjutkan hingga file kelima/terakhir, dan pada akhirnya kita akan mendapat
 Dan yap, kita mendapatkan flag nya adalah KOMJAR25{Y0u_4r3_4_g00d_4nalyz3r_tzZFv3zLIo9vjHi7IJ2HaLX04}
 
 
+## Soal 17
+Untuk tahap awal, kita akan memfilter paket yang berisi file .exe pada Wireshark.
 
+---
 
+<img width="950" height="155" alt="image" src="https://github.com/user-attachments/assets/bec3ba02-8823-43df-ae0e-8178b5898280" />
+
+---
+
+Setelah kita memfilter paket yang berisi file .exe, ternyata hanya terdapat satu alamat IP yang memiliki file tersebut. Kemudian, saat saya memeriksa file lain melalui protokol HTTP, dan mencoba melakukan proses export, terlihat bahwa ada tiga file yang tersedia.
+
+---
+
+<img width="906" height="170" alt="image" src="https://github.com/user-attachments/assets/42ce1549-f43f-4136-8b9d-3701878f9c01" />
+
+---
+
+Kemudian, saya mencoba memasukkan jawabannya ke terminal, dan hasil yang benar adalah…
+
+```bash
+Invoice&MSO-Request.doc
+```
+
+---
+
+<img width="568" height="170" alt="image" src="https://github.com/user-attachments/assets/c6e72ca5-3bb9-4ee4-b581-c00d56245b60" />
+
+---
+
+Selanjutnya, kita diminta untuk memasukkan nama dari file sus yang kedua. Kemudian, kita hanya perlu menjawab dengan… 
+
+```bash
+knr.exe
+```
+
+---
+
+<img width="586" height="98" alt="image" src="https://github.com/user-attachments/assets/ab790da2-2654-4e70-95fd-251179358121" />
+
+---
+
+Kemudian, kita diminta untuk mencari hash dari file sus (knr.exe). Untuk menyelesaikan soal ini, kita hanya perlu mengekspor file tersebut, kemudian menjalankan perintah sha256sum <file> pada terminal. Diharapkan output-nya akan seperti berikut: 
+
+---
+
+<img width="893" height="92" alt="image" src="https://github.com/user-attachments/assets/3a5ea09d-e2f6-434d-a0b9-7c2e7f5ce7ac" />
+
+---
+
+Setelah mendapatkan hash, kita kembali ke netcat untuk memasukkan hash tersebut. 
+
+---
+
+<img width="1079" height="107" alt="image" src="https://github.com/user-attachments/assets/3ca18ec0-774f-476b-ba24-21ffda17ce64" />
+
+---
+
+Dan yap, kita mendapatkan flag nya adalah
+KOMJAR25{M4ster_4n4lyzer_ONhC0LT1jCa08TQYE4xd6dP5T}
 
 
 
